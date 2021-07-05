@@ -12,7 +12,7 @@ module.exports = (env) => {
       type: 'filesystem'
     },
     entry: {
-      index: './src/main.ts'
+      index: './src/index.ts'
     },
     resolve: {
       extensions: ['.js', '.ts'],

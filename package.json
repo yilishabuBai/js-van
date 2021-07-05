@@ -2,11 +2,10 @@
   "name": "js-van",
   "version": "0.0.2",
   "description": "前端数据存储库，支持cookie与webstorage",
-  "main": "dist/index.js",
+  "main": "index.ts",
   "typings": "index.d.ts",
   "files": [
-    "src",
-    "dist"
+    "packages"
   ],
   "scripts": {
     "build": "cross-env NODE_ENV=prod node ./build/bin/build.js",

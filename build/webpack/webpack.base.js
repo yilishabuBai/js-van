@@ -12,12 +12,12 @@ module.exports = (env) => {
       type: 'filesystem'
     },
     entry: {
-      index: './src/index.ts'
+      index: './packages/index.ts'
     },
     resolve: {
       extensions: ['.js', '.ts'],
       alias: {
-        '@': path.resolve(root, 'src')
+        '@': path.resolve(root, 'packages')
       }
     },
     module: {

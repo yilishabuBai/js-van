@@ -5,14 +5,14 @@ declare enum VanType {
   cookie = 4
 }
 
-export interface IVanOptions {
-  type: VanType,
-  expires?: number,
+export class VanOptions {
+  type: VanType
+  expires?: number | string
   domain?: string
 }
 
-export function set($key: string, $value: any, $options?: IVanOptions): void
+export function set($key: string, $value: any, $options?: VanOptions): void
 
-export function get($key: string, $options?: IVanOptions): any
+export function get($key: string, $options?: VanOptions): any
 
-export function remove($ket: string, $options?: IVanOptions): any
+export function remove($ket: string, $options?: VanOptions): void

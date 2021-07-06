@@ -8,7 +8,7 @@ import GetterFactory from './utils/GetterFactory'
 import RemoverFactory from './utils/RemoverFactory'
 
 export function set ($key: string, $value: any, $options?: VanOptions): void {
-  const options = Object.assign(new VanOptions(VanType.localStorage), $options) // $options || new VanOptions(VanType.localStorage)
+  const options = Object.assign(new VanOptions(VanType.localStorage), $options)
   for (const key in VanType) {
     if (isNaN(parseInt(key))) {
       const type: VanType = VanType[key] as unknown as VanType
@@ -21,7 +21,7 @@ export function set ($key: string, $value: any, $options?: VanOptions): void {
 }
 
 export function get ($key: string, $options?: VanOptions): any {
-  const options = $options || new VanOptions(VanType.localStorage)
+  const options = Object.assign(new VanOptions(VanType.localStorage), $options)
   for (const key in VanType) {
     if (isNaN(parseInt(key))) {
       const type: VanType = VanType[key] as unknown as VanType
@@ -34,13 +34,13 @@ export function get ($key: string, $options?: VanOptions): any {
 }
 
 export function remove ($key: string, $options?: VanOptions): void {
-  const options = $options || new VanOptions(VanType.localStorage)
+  const options = Object.assign(new VanOptions(VanType.localStorage), $options)
   for (const key in VanType) {
     if (isNaN(parseInt(key))) {
       const type: VanType = VanType[key] as unknown as VanType
       if (type && options.type) {
         const getter: IRemover = RemoverFactory.getRemover(type)
-        return getter.remove($key)
+        getter.remove($key)
       }
     }
   }

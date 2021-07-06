@@ -1,6 +1,6 @@
 {
   "name": "js-van",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "前端数据存储库，支持cookie与storage",
   "main": "./lib/index.js",
   "typings": "./types/index.d.ts",

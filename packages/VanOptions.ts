@@ -1,5 +1,5 @@
 import IVanOptions from './interface/IVanOptions'
-import VanType from './enum/VanType'
+import { VanType } from './enum'
 
 export default class VanOptions implements IVanOptions {
   type: VanType

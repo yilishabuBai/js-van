@@ -1,5 +1,5 @@
 import CookieGetter from '../cookie/Getter'
-import VanType from '../enum/VanType'
+import { VanType } from '../enum'
 import IGetter from '../interface/IGetter'
 import StorageGetter from '../storage/Getter'
 

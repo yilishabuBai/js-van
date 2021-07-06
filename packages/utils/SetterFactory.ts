@@ -1,5 +1,5 @@
 import CookieSetter from '../cookie/Setter'
-import VanType from '../enum/VanType'
+import { VanType } from '../enum'
 import ISetter from '../interface/ISetter'
 import StorageSetter from '../storage/Setter'
 

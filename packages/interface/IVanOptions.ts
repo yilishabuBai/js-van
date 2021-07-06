@@ -1,4 +1,4 @@
-import VanType from '../enum/VanType'
+import { VanType } from '../enum'
 
 export default interface IVanOptions {
   type: VanType,

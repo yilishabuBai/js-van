@@ -1,5 +1,5 @@
 import CookieRemover from '../cookie/Remover'
-import VanType from '../enum/VanType'
+import { VanType } from '../enum'
 import IRemover from '../interface/IRemover'
 import StorageRemover from '../storage/Remover'
 

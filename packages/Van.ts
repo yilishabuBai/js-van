@@ -1,5 +1,5 @@
 import VanOptions from './VanOptions'
-import VanType from './enum/VanType'
+import { VanType } from './enum'
 import SetterFactory from './utils/SetterFactory'
 import ISetter from './interface/ISetter'
 import IGetter from './interface/IGetter'

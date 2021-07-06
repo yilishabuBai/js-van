@@ -8,7 +8,7 @@ import GetterFactory from './utils/GetterFactory'
 import RemoverFactory from './utils/RemoverFactory'
 
 export function set ($key: string, $value: any, $options?: VanOptions): void {
-  const options = $options || new VanOptions(VanType.localStorage)
+  const options = Object.assign(new VanOptions(VanType.localStorage), $options) // $options || new VanOptions(VanType.localStorage)
   for (const key in VanType) {
     if (isNaN(parseInt(key))) {
       const type: VanType = VanType[key] as unknown as VanType

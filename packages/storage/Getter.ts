@@ -21,7 +21,7 @@ export default class CookieGetter implements IGetter {
       console.error(`js-van: 获取数据异常！\nkey: ${$key}\n${error}`)
       return null
     }
-    const time = !isNaN(result.expires) ? new Date(result.expires) : Infinity
+    const time = result.expires ? new Date(result.expires) : Infinity
     if (time <= Date.now()) {
       this.storage.removeItem($key)
       return null
